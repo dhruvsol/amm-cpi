@@ -1,0 +1,16 @@
+[package]
+name = "stabble-weighted-swap-cpi"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "stabble_weighted_swap_cpi"
+
+[features]
+default = ["cpi"]
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+
+[dependencies]
+anchor-lang = "0.30.0"
