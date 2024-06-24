@@ -13,6 +13,15 @@ pub struct Initialize<'info> {
 }
 
 #[derive(Accounts)]
+pub struct Shutdown<'info> {
+    #[account(mut)]
+    pub owner: AccountInfo<'info>,
+
+    #[account(mut)]
+    pub pool: AccountInfo<'info>,
+}
+
+#[derive(Accounts)]
 pub struct Deposit<'info> {
     #[account(signer)]
     pub user: AccountInfo<'info>,

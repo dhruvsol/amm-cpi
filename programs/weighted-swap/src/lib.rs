@@ -17,6 +17,11 @@ pub mod weighted_swap {
         Ok(())
     }
 
+    /// shutdown the zero-liquidity pool
+    pub fn shutdown(ctx: Context<Shutdown>) -> Result<()> {
+        Ok(())
+    }
+
     /// add liquidity
     pub fn deposit<'a, 'b, 'c, 'info>(
         ctx: Context<'_, '_, '_, 'info, Deposit<'info>>,
@@ -63,11 +68,6 @@ pub mod weighted_swap {
     }
 
     pub fn reject_owner(ctx: Context<PendingOwnerOnly>) -> Result<()> {
-        Ok(())
-    }
-
-    /// shutdown the zero-liquidity pool
-    pub fn shutdown<'a, 'b, 'c, 'info>(ctx: Context<'_, '_, '_, 'info, OwnerOnly<'info>>) -> Result<()> {
         Ok(())
     }
 }
